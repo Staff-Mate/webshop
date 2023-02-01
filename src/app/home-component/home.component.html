@@ -1,0 +1,55 @@
+<div class="root">
+
+  <div class="page">
+    <mat-form-field >
+      <mat-label>API Token</mat-label>
+      <input matInput type="text" [formControl]="apiKey" >
+    </mat-form-field>
+
+    <div class="component">
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Company Registration</mat-card-title>
+          <mat-card-subtitle>$20</mat-card-subtitle>
+        </mat-card-header>
+        <mat-radio-group [formControl]="billingCycle"
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group">
+          <mat-radio-button class="example-radio-button" value="ONE_TIME" >
+            One time
+          </mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="MONTH">
+            Monthly
+          </mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="YEAR">
+            Yearly
+          </mat-radio-button>
+        </mat-radio-group>
+        <mat-card-actions align="end">
+          <button mat-button (click)="onBuy(20, billingCycle.value)">Buy</button>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card>
+
+        <mat-card-header>
+          <mat-card-title>Premium Employment</mat-card-title>
+          <mat-card-subtitle>$100</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions align="end">
+          <button mat-button (click)="onBuy(100, 'ONE_TIME')">Buy</button>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card>
+
+        <mat-card-header>
+          <mat-card-title>Employment Package</mat-card-title>
+          <mat-card-subtitle>$200</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions align="end">
+          <button mat-button (click)="onBuy(200, 'ONE_TIME')">Buy</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
