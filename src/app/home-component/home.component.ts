@@ -18,7 +18,7 @@ export class HomeComponent {
 
   onBuy(amount: number, billingCycle: string) {
     if(this.apiKey.value){
-      this.http.post("http://localhost:9000/auth-service/payment-attempts/", {apiKey: this.apiKey.value ,amount: amount, billingCycle: billingCycle}, { responseType: 'text' as const}).subscribe(response =>{
+      this.http.post("http://192.168.0.21:9000/auth-service/payment-attempts/", {apiKey: this.apiKey.value ,amount: amount, billingCycle: billingCycle}, { responseType: 'text' as const}).subscribe(response =>{
         window.location.href = response;
       })
     }else{
