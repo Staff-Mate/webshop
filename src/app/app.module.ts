@@ -14,11 +14,15 @@ import {MatInputModule} from "@angular/material/input";
 import {HttpClientModule} from "@angular/common/http";
 import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatRadioModule} from "@angular/material/radio";
+import { PaymentResultEmptyComponent } from './payment-result-empty/payment-result-empty.component';
+import { PaymentResultComponent } from './payment-result/payment-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PaymentResultEmptyComponent,
+    PaymentResultComponent
   ],
   imports: [
     BrowserModule,
